@@ -30,7 +30,7 @@ const Main: NextPage = () => {
   const props = {
     name: "file",
     multiple: true,
-    // action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
+    action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
     onChange(info: any) {
       const { status } = info.file;
       if (status !== "uploading") {
@@ -129,7 +129,7 @@ const Main: NextPage = () => {
           <h3>Selecione as Fotos</h3>
           <Upload>
             <Button>
-              <UploadOutlined multiple /> Click to Upload
+              <UploadOutlined /> Click to Upload
             </Button>
           </Upload>
         </Col>
