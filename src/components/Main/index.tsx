@@ -82,43 +82,37 @@ const Main: NextPage = () => {
   };
   return (
     <div>
-      <Row>
-        <Col span={12}>
+      <Row justify="center">
+        <Col xs={12} sm={12} md={12} lg={12} xl={12}>
           <h3>Nome do Imóvel</h3>
-          <Input placeholder="Nome..." />
+          <Input style={{ maxWidth: "450px" }} placeholder="Nome..." />
         </Col>
-        <Col span={12}>
-          <h3>Data do cadastro</h3>
-          <Space direction="vertical" size={12}>
-            <DatePicker
-              defaultValue={moment("01/01/2022", dateFormat)}
-              format={dateFormat}
-            />
-          </Space>
+        <Col xs={12} sm={12} md={12} lg={12} xl={12}>
+          <h3>Nome do Imóvel</h3>
+          <Input style={{ maxWidth: "450px" }} placeholder="Nome..." />
         </Col>
       </Row>
       <Checkbox.Group style={{ width: "100%" }} onChange={onChange}>
         <Row>
-          <Col span={8}>
+          <Col span={6}>
             <Checkbox value="Piscina">Piscina</Checkbox>
           </Col>
-          <Col span={8}>
+          <Col span={6}>
             <Checkbox value="AceitaPets">AceitaPets</Checkbox>
           </Col>
-          <Col span={8}>
+        </Row>
+        <Row>
+          <Col span={6}>
             <Checkbox value="Estacionamento">Estacionamento</Checkbox>
           </Col>
-          <Col span={8}>
+          <Col span={6}>
             <Checkbox value="Salão">Salão</Checkbox>
-          </Col>
-          <Col span={8}>
-            <Checkbox value="Segurança">Segurança</Checkbox>
           </Col>
         </Row>
       </Checkbox.Group>
       ,
       <Row>
-        <Col span={12}>
+        <Col span={8}>
           <h3>Preço</h3>
           <Space>
             <InputNumber
@@ -131,13 +125,21 @@ const Main: NextPage = () => {
             />
           </Space>
         </Col>
-        <Col span={12}>
+        <Col span={8}>
           <h3>Selecione as Fotos</h3>
           <Upload>
             <Button>
               <UploadOutlined multiple /> Click to Upload
             </Button>
           </Upload>
+        </Col>
+        <Col span={8}>
+          <h3>Data do cadastro</h3>
+          <Space direction="vertical" size={12}>
+            <DatePicker
+              format={dateFormat}
+            />
+          </Space>
         </Col>
       </Row>
       <Row>
